@@ -23,18 +23,17 @@
     <link rel="stylesheet" href="css/tabs.css">
 </head>
 <body onload="setear()">
-      <div class="col-md-12">
-      <div class="tab">
-        <button class="tablinksR" id="buttonConsola" onclick="mostarPestaniaR(event, 'Consola')">Consola</button>
-        <button class="tablinksR" onclick="mostarPestaniaR(event, 'Tabla de Simbolos')">Tabla de Simbolos</button>
-       
-      </div>
+    <div class="col-md-12">
+        <div class="tab">
+            <button class="tablinksR" id="buttonConsola" onclick="mostarPestaniaR(event, 'Consola')">Consola</button>
+            <button class="tablinksR" onclick="mostarPestaniaR(event, 'Tabla de Simbolos')">Tabla de Simbolos</button>
+        
+        </div>
+        <div id="Consola" class="tabcontentR">
+            <textarea class="codemirror-textarea" name="" id="consola" cols="30" rows="10"></textarea>
+        </div>
       
-      <div id="Consola" class="tabcontentR">
-          <textarea class="codemirror-textarea" name="" id="consola" cols="30" rows="10"></textarea>
-      </div>
-      
-    <div id="Tabla de Simbolos" class="tabcontentR">
+        <div id="Tabla de Simbolos" class="tabcontentR">
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
@@ -48,10 +47,10 @@
                     <tbody id="contenido_tablaSimbolos">
                     </tbody>
             </table>
+        </div>
+      
+      
     </div>
-      
-      
-      </div>
       
       <footer>
       <nav>

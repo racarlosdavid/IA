@@ -4,6 +4,26 @@
 var contadorVisitas=[0,0,0,0,0,0,0,0];
 var supero2Visitas=[false,false,false,false,false,false,false,false];
 const visitasNecesarias = 2;
+let consola;
+
+function setear() {
+    nuevaPestaña();
+    
+    consola = CodeMirror.fromTextArea(document.getElementById("consola"),{
+        lineNumbers : true,
+        mode: "modo",
+        theme : "base16-dark",
+    });
+    consola.setSize(null,250);
+    document.getElementById("buttonConsola").click();
+    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
+}
+
+function limpiarConsola(){
+    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
+    document.getElementById("buttonConsola").click();
+    setTimeout(function(){  }, 100);
+}
  
 function reflex_agent(location, state){
    	if (state=="DIRTY") {
@@ -130,23 +150,3 @@ var states = ["A","DIRTY","DIRTY"];
 test(states);
 
 
-let consola;
-
-function setear() {
-    nuevaPestaña();
-    
-    consola = CodeMirror.fromTextArea(document.getElementById("consola"),{
-        lineNumbers : true,
-        mode: "modo",
-        theme : "base16-dark",
-    });
-    consola.setSize(null,250);
-    document.getElementById("buttonConsola").click();
-    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
-}
-
-function limpiarConsola(){
-    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
-    document.getElementById("buttonConsola").click();
-    setTimeout(function(){  }, 100);
-}
