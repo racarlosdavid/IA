@@ -45,36 +45,43 @@ function llenar_bitacora(){
 			supero2Visitas[0]=true;
 		}
 	}else if( states[0] == "A" && states[1]=="CLEAN" && states[2]=="DIRTY" ){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado2.png";
 		contadorVisitas[1] += 1;
 		if (contadorVisitas[1]>=visitasNecesarias) {
 			supero2Visitas[1]=true;
 		}
 	}else if( states[0] == "B" && states[1]=="CLEAN" && states[2]=="DIRTY" ){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado3.png";
 		contadorVisitas[2] += 1;
 		if (contadorVisitas[2]>=visitasNecesarias) {
 			supero2Visitas[2]=true;
 		}
 	}else if( states[0] == "B" && states[1]=="CLEAN" && states[2]=="CLEAN" ){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado4.png";
 		contadorVisitas[3] += 1;
 		if (contadorVisitas[3]>=visitasNecesarias) {
 			supero2Visitas[3]=true;
 		}
 	}else if(  states[0] == "A" && states[1]=="CLEAN" && states[2]=="CLEAN" ){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado5.png";
 		contadorVisitas[4] += 1;
 		if (contadorVisitas[4]>=visitasNecesarias) {
 			supero2Visitas[4]=true;
 		}
 	}else if(states[0] == "A" && states[1]=="DIRTY" && states[2]=="CLEAN"){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado6.png";
 		contadorVisitas[5] += 1;
 		if (contadorVisitas[5]>=visitasNecesarias) {
 			supero2Visitas[5]=true;
 		}
 	}else if( states[0] == "B" && states[1]=="DIRTY" && states[2]=="CLEAN" ){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado7.png";
 		contadorVisitas[6] += 1;
 		if (contadorVisitas[6]>=visitasNecesarias) {
 			supero2Visitas[6]=true;
 		}
 	}else if(states[0] == "B" && states[1]=="DIRTY" && states[2]=="DIRTY"){
+		document.getElementById("estado").src = "src/reflexAgent/img/estado8.png";
 		contadorVisitas[7] += 1;
 		if (contadorVisitas[7]>=visitasNecesarias) {
 			supero2Visitas[7]=true;
