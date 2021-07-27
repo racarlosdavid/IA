@@ -94,9 +94,16 @@ function test(states){
       	var state = states[0] == "A" ? states[1] : states[2];
       	var action_result = reflex_agent(location, state);
 		llenar_bitacora();
-		let salida ="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
-      	console.log(salida);
+		let salida = "<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
+      	let consola_data = consol_log + " "+ salida;
+		console.log(salida);
 		console.log(states)
+
+		//Imprimo los logs
+		consola.setValue(consola_data.toString()); 
+		document.getElementById("buttonConsola").click();
+
+
       	document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
       	if (action_result == "CLEAN"){
         	if (location == "A") {
@@ -121,3 +128,25 @@ function test(states){
 setInterval(function(){ ensuciar(); }, 4000);
 var states = ["A","DIRTY","DIRTY"];
 test(states);
+
+
+let consola;
+
+function setear() {
+    nuevaPestaña();
+    
+    consola = CodeMirror.fromTextArea(document.getElementById("consola"),{
+        lineNumbers : true,
+        mode: "modo",
+        theme : "base16-dark",
+    });
+    consola.setSize(null,250);
+    document.getElementById("buttonConsola").click();
+    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
+}
+
+function limpiarConsola(){
+    consola.setValue("\n\n\n\n\n\n\n\n\n\n");
+    document.getElementById("buttonConsola").click();
+    setTimeout(function(){  }, 100);
+}
