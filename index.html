@@ -1,26 +1,135 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inteligencia Artificial</title>
-    <base href="https://racarlosdavid.github.io/IA/">
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="utf-8">
+  <title>Teoria de Colas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="codemirror-5.53.2/lib/codemirror.css" />
+    <link rel="stylesheet" href="codemirror-5.53.2/theme/base16-dark.css" />
+
+    <script type="text/javascript" src="codemirror-5.53.2/lib/codemirror.js"></script>
+    <script type="text/javascript" src="codemirror-5.53.2/addon/mode/simple.js"></script>
+    <script type="text/javascript" src="js/syntaxHighlighter.js"></script>
+
+    <script src="js/tabs.js"></script>
+    <script src="js/ejecutar.js"></script>
+    <link rel="stylesheet" href="css/tabs.css">
+
+    <script src="index.js"></script>
+
+    <script src="src/MM1.js"></script>
+
 </head>
-<body>
-    <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="src/reflexAgent/page.html">Reflex Agent</a>
-        <a href="src/reflexAgent/p.html">Contact</a>
-        <a href="#about">About</a>
-    </div>
+<body onload="setear()">
+  
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="src/reflexAgent/page.html">Reflex Agent</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+</div>
+<h2>Reflex agent</h2>
+<img id="estado" src="src/reflexAgent/img/estado1.png">
 
-    <div style="padding-left:16px">
-        <h2>Tareas IA</h2>
-        <p>201213132 Carlos David Ramirez Altan</p>
-    </div>
+<div class="col-md-12">
+<div class="tab">
+  <button class="tablinksR" id="buttonMM1" onclick="mostarPestaniaR(event, 'MM1')">M/M/1</button>
+  <button class="tablinksR" onclick="mostarPestaniaR(event, 'MMK')">M/M/K</button>
+</div>
 
+<div id="MM1" class="tabcontentR">
+  <div class="row">
+    <div class="col-7 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h4>Log</h4>
+        </div>
+        <textarea class="codemirror-textarea" name="" id="log" cols="30" rows="13">
+          
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="MMK" class="tabcontentR">
+  <div class="row">
+    <div class="col-4 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h4>Variables </h4>
+        </div>
+        <div>
+          <form>
+            <label for="mmk_λ">λ:</label><br>
+            <input type="text" id="mmk_λ" name="mmk_λ"><br>
+            <label for="mmk_μ">μ:</label><br>
+            <input type="text" id="mmk_μ" name="mmk_μ"><br>
+            <label for="mmk_K">k:</label><br>
+            <input type="text" id="mmk_K" name="mmk_K"><br>
+            <label for="mmk_n">n: para calcular Pn</label><br>
+            <input type="text" id="mmk_n" name="mmk_n"><br>
+            <label for="mmk_t">t: para calcular P(Wq > t) y (PW > t)</label><br>
+            <input type="text" id="mmk_t" name="mmk_t"><br>
+            <button type="button" class="m-2 btn btn-success btn-lg" onclick="mmk()">Calcular M/M/K </button> 
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-7 mt-3">
+      <div class="card">
+        <div class="card-header">
+          <h4>Resultados</h4>
+        </div>
+        <textarea class="codemirror-textarea" name="" id="code_mmk" cols="30" rows="13">
+          
+        </textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+<nav>
+  <div class="color_base" style="height: 50px">
+  </div>
+</nav>
+</footer>
+
+<footer class="section footer-classic context-dark bg-image mt-4">
+<div class="container">
+  <div class="row row-30">
+    <div class="col-md-4 col-xl-5">
+     
+      <div class="pr-xl-4">
+          <!--
+        <a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+          -->
+        <!-- Rights-->
+        <p class="rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>FIUSAC</span><span>. </span><span>All Rights Reserved.</span></p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h5>Contacto</h5>
+      <dl class="contact-list">
+        <dt>Github:</dt>
+        <dd><a href="https://github.com/racarlosdavid">https://github.com/racarlosdavid</a></dd>
+      </dl>
+      <dl class="contact-list">
+        <dt>email:</dt>
+        <dd><a href="mailto:#">201213132@ingenieria.usac.edu.gt</a></dd>
+      </dl>
+    </div>
+  </div>
+</div>
+</footer>
 </body>
 </html>
-
-
-
