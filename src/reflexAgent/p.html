@@ -17,9 +17,9 @@
     <script type="text/javascript" src="codemirror-5.53.2/lib/codemirror.js"></script>
     <script type="text/javascript" src="codemirror-5.53.2/addon/mode/simple.js"></script>
     <script type="text/javascript" src="js/syntaxHighlighter.js"></script>
-
-    <script src="js/tabs.js"></script>
     <script type="text/javascript" src="src/reflexAgent/reflexAgent.js"></script>
+    <script src="js/tabs.js"></script>
+    
     <link rel="stylesheet" href="css/tabs.css">
 </head>
 <body onload="setear()">
@@ -34,22 +34,21 @@
           <textarea class="codemirror-textarea" name="" id="consola" cols="30" rows="10"></textarea>
       </div>
       
-      <div id="Tabla de Simbolos" class="tabcontentR">
-          <table class="table table-striped mt-3">
-          <thead>
-             <tr>
-                 <th scope="col">Identificador</th>
-                 <th scope="col">Tipo</th>
-                 <th scope="col">Valor</th>
-                 <th scope="col">Ambito</th>
-                 <th scope="col">Padre</th>
-              </tr>
-          </thead>
-                <tbody id="contenido_tablaSimbolos">
-                                    
-                   </tbody>
-              </table>
-      </div>
+    <div id="Tabla de Simbolos" class="tabcontentR">
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Identificador</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Ambito</th>
+                        <th scope="col">Padre</th>
+                    </tr>
+                </thead>
+                    <tbody id="contenido_tablaSimbolos">
+                    </tbody>
+            </table>
+    </div>
       
       
       </div>
