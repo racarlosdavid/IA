@@ -16,12 +16,12 @@ function reflex_agent(location, state){
 }
 
 function ensuciar(){
-	let aleatorio = Math.floor(Math.random() * 8) + 1;
-	if(aleatorio == 2 ){ //Si el random es 1 ensucio A Y B
+	let aleatorio = Math.floor(Math.random() * 3) + 1;
+	if(aleatorio == 1 ){ //Si el random es 1 ensucio A Y B
 		states[1]="DIRTY"; 
-	}else if (aleatorio == 4) { //Si el random es 2 ensucio solo A
+	}else if (aleatorio == 2) { //Si el random es 2 ensucio solo A
 		states[2]="DIRTY";
-	}else if (aleatorio == 6) { //Si el random es 2 ensucio solo A
+	}else if (aleatorio == 3) { //Si el random es 2 ensucio solo A
 		states[1]="DIRTY"; 
 		states[2]="DIRTY"; 
 	}
