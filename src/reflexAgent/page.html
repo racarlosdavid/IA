@@ -2,6 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Inteligencia Artificial</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <base href="https://racarlosdavid.github.io/IA/">
         <link rel="stylesheet" href="css/estilo.css">
     </head>
@@ -13,7 +14,51 @@
         <a href="#about">About</a>
     </div>
     <h2>Reflex agent</h2>
+    <br>
+    <h2>Contador de visitas</h2>
+    <div id="Errores" class="tabcontentR">
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Estado 1</th>
+                    <th>Estado 2</th>
+                    <th>Estado 3</th>
+                    <th>Estado 4</th>
+                    <th>Estado 5</th>
+                    <th>Estado 6</th>
+                    <th>Estado 7</th>
+                    <th>Estado 8</th>
+                </tr>
+            </thead>
+            <tr>
+                <td scope="col"><img src="src/reflexAgent/img/estado1.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado2.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado3.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado4.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado5.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado6.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado7.png" alt="" border="3" height="100" width="160"/></td>
+                <td scope="col"><img src="src/reflexAgent/img/estado8.png" alt="" border="3" height="100" width="160"/></td>
+            </tr>
+            <tr>
+                <td><h1 id="cont1" align='center'>0</h1></td>
+                <td><h1 id="cont2" align='center'>0</h1></td>
+                <td><h1 id="cont3" align='center'>0</h1></td>
+                <td><h1 id="cont4" align='center'>0</h1></td>
+                <td><h1 id="cont5" align='center'>0</h1></td>
+                <td><h1 id="cont6" align='center'>0</h1></td>
+                <td><h1 id="cont7" align='center'>0</h1></td>
+                <td><h1 id="cont8" align='center'>0</h1></td>
+            </tr>
+        </table>
+    </div>
+      
+    <br>
+    <h2>Estado Actual</h2>
     <img id="estado">
+    <p id="log_actual"></p>
+    <br>
+    <h2>Log</h2>
     <p id="log"></p>
     <script type="text/javascript" src="src/reflexAgent/reflexAgent.js"></script>
 </body>

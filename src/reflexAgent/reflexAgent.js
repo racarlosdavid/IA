@@ -87,18 +87,27 @@ function llenar_bitacora(){
 			supero2Visitas[7]=true;
 		}
 	}
+	document.getElementById("cont1").innerHTML = contadorVisitas[0];
+	document.getElementById("cont2").innerHTML = contadorVisitas[1];
+	document.getElementById("cont3").innerHTML = contadorVisitas[2];
+	document.getElementById("cont4").innerHTML = contadorVisitas[3];
+	document.getElementById("cont5").innerHTML = contadorVisitas[4];
+	document.getElementById("cont6").innerHTML = contadorVisitas[5];
+	document.getElementById("cont7").innerHTML = contadorVisitas[6];
+	document.getElementById("cont8").innerHTML = contadorVisitas[7];
 }
 
 function test(states){
       	var location = states[0];		
       	var state = states[0] == "A" ? states[1] : states[2];
       	var action_result = reflex_agent(location, state);
-		llenar_bitacora();
-		let salida ="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
-      	console.log(salida);
-		console.log(states)
+		let salida ="Location: ".concat(location).concat(" | Action: ").concat(action_result);
       	document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
-      	if (action_result == "CLEAN"){
+		document.getElementById("log_actual").innerHTML="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
+		llenar_bitacora();
+		console.log(salida);
+		console.log(states)
+		if (action_result == "CLEAN"){
         	if (location == "A") {
 				states[1] = "CLEAN";
 			} else if (location == "B") { 
@@ -114,6 +123,7 @@ function test(states){
 			setTimeout(function(){ test(states); }, 2000);
 		}else {
 			console.log("Termino "+ contadorVisitas);
+			
 		}
 	
 	
